@@ -1,0 +1,19 @@
+{
+  "name": "vuepress-theme-modern-portfolio",
+  "version": "0.1.0",
+  "description": "A vuepress theme to quickly build a simple porfolio. The design and style come from https://github.com/bradtraversy/modern_portfolio",
+  "keywords": [
+    "vuepress",
+    "vue",
+    "sass",
+    "traversymedia",
+    "theme",
+    "portfolio"
+  ],
+  "author": "Florian Hermann",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0"
+  }
+}

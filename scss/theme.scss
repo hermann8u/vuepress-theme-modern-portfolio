@@ -1,0 +1,96 @@
+@import 'config';
+@import 'mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: $main-color;
+  color: set-text-color($main-color);
+  height: 100%;
+  margin: 0;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+#app {
+  height: 100%;
+}
+
+.theme-container {
+  @include background;
+  height: 100%;
+
+  &.no-overflow {
+    overflow: hidden;
+  }
+}
+
+.content {
+  padding: 5px;
+}
+
+// Headers
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.text-accent {
+  color: $accent-color;
+}
+
+main {
+  position: relative;
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+  z-index: 2;
+}
+
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: justify;
+    padding: 4rem 1rem;
+  }
+}
+
+// Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $accent-color;
+    color: set-text-color($accent-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($main-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($main-color, 50);
+  color: #333;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
